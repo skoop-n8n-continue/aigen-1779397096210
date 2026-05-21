@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World Signage</title>
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background elements -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+
+    <!-- Main signage container -->
+    <main class="signage-container">
+        <!-- Top status bar with Time, Date and Location/Message -->
+        <header class="top-bar">
+            <div class="status-left">
+                <img src="https://unpkg.com/lucide-static@latest/icons/radio.svg" alt="Signal" class="pulse-icon" width="20" height="20">
+                <span class="status-text">LIVE FEED</span>
+            </div>
+            <div class="date-container" id="date-display">
+                Thursday, May 21, 2026
+            </div>
+        </header>
+
+        <!-- Center Stage: Hello World & Multilingual displays -->
+        <section class="main-content">
+            <div class="subtitle">PROJECT STATUS</div>
+            <div class="main-title-container">
+                <h1 id="greeting-title" class="hello-title">Hello World</h1>
+            </div>
+            <div class="subtitle-language" id="language-display">English</div>
+        </section>
+
+        <!-- Bottom bar with ticking indicator and uptime -->
+        <footer class="bottom-bar">
+            <div class="system-time" id="time-display">
+                12:00:00 PM
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="cycle-progress"></div>
+            </div>
+            <div class="system-uptime" id="uptime-display">
+                Uptime: 00:00:00
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
