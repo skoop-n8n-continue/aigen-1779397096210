@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // DOM Elements
     const timeDisplay = document.getElementById('time-display');
     const dateDisplay = document.getElementById('date-display');
-    const uptimeDisplay = document.getElementById('uptime-display');
     const greetingTitle = document.getElementById('greeting-title');
     const languageDisplay = document.getElementById('language-display');
     const progressFill = document.getElementById('cycle-progress');
@@ -33,9 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const CYCLE_DURATION = 5000; // 5 seconds per greeting
     let cycleStartTime = Date.now();
 
-    // Initialize Uptime Tracker
-    const appStartTime = Date.now();
-
     // 1. Live Clock & Date Tracker
     function updateClock() {
         const now = new Date();
@@ -53,13 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Date String (e.g. "Thursday, May 21, 2026")
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         dateDisplay.textContent = now.toLocaleDateString('en-US', options);
-
-        // Calculate Uptime
-        const diffMs = Date.now() - appStartTime;
-        const diffSecs = Math.floor(diffMs / 1000) % 60;
-        const diffMins = Math.floor(diffMs / (1000 * 60)) % 60;
-        const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-        uptimeDisplay.textContent = `Uptime: ${String(diffHrs).padStart(2, '0')}:${String(diffMins).padStart(2, '0')}:${String(diffSecs).padStart(2, '0')}`;
     }
 
     setInterval(updateClock, 1000);
