@@ -171,6 +171,7 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    overflow: visible;
 }
 
 .hello-title {
@@ -178,7 +179,8 @@ body {
     font-size: 5.5rem;
     font-weight: 800;
     letter-spacing: -0.02em;
-    line-height: 1.1;
+    line-height: 1.3;
+    padding-bottom: 0.2em;
     background: linear-gradient(135deg, var(--text-main) 40%, var(--primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
