@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary: #ff3344;      /* Vibrant Red */
-    --primary-glow: rgba(255, 51, 68, 0.4);
+    --primary: #00b7af;      /* Vibrant Teal */
+    --primary-glow: rgba(0, 183, 175, 0.4);
     --dark: #10181f;         /* Dark Navy */
     --dark-bg: #090e12;      /* Rich Deep Dark */
     --light: #ffffff;
     --gray: #6a7071;
     --card-bg: rgba(16, 24, 31, 0.6);
-    --border: rgba(255, 51, 68, 0.15);
+    --border: rgba(0, 183, 175, 0.15);
 }
 
 body {
@@ -65,7 +65,7 @@ body {
     left: 10%;
     width: 60vw;
     height: 60vw;
-    background: radial-gradient(circle, #800c19 0%, transparent 70%);
+    background: radial-gradient(circle, #005f5b 0%, transparent 70%);
     animation: drift-medium 30s infinite alternate ease-in-out;
 }
 
@@ -93,7 +93,7 @@ body {
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4),
-                inset 0 0 40px rgba(255, 51, 68, 0.05);
+                inset 0 0 40px rgba(0, 183, 175, 0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +117,7 @@ body {
 }
 
 .pulse-icon {
-    filter: brightness(0) saturate(100%) invert(23%) sepia(91%) saturate(5428%) hue-rotate(338deg) brightness(97%) contrast(107%);
+    filter: invert(53%) sepia(87%) saturate(1478%) hue-rotate(136deg) brightness(97%) contrast(101%);
     animation: beacon 2s infinite ease-in-out;
 }
 
@@ -181,7 +181,7 @@ body {
     background: linear-gradient(135deg, var(--light) 40%, var(--primary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 80px rgba(255, 51, 68, 0.15);
+    text-shadow: 0 0 80px rgba(0, 183, 175, 0.15);
     opacity: 1;
     transform: scale(1);
     transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);

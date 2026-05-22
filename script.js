@@ -160,8 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 51, 68, ${this.alpha})`; // Skoop red
-            ctx.shadowColor = 'rgba(255, 51, 68, 0.5)';
+            ctx.fillStyle = `rgba(0, 183, 175, ${this.alpha})`; // Skoop teal
+            ctx.shadowColor = 'rgba(0, 183, 175, 0.5)';
             ctx.shadowBlur = 8;
             ctx.fill();
         }
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
-                    ctx.strokeStyle = `rgba(255, 51, 68, ${alpha})`;
+                    ctx.strokeStyle = `rgba(0, 183, 175, ${alpha})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke();
                 }
