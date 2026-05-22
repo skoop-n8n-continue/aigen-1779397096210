@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
             ctx.fillStyle = `rgba(0, 183, 175, ${this.alpha})`; // Skoop teal
-            ctx.shadowColor = 'rgba(0, 183, 175, 0.5)';
-            ctx.shadowBlur = 8;
+            ctx.shadowColor = 'rgba(0, 183, 175, 0.3)';
+            ctx.shadowBlur = 3;
             ctx.fill();
         }
     }
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
             for (let j = i + 1; j < particles.length; j++) {
                 const dist = Math.hypot(particles[i].x - particles[j].x, particles[i].y - particles[j].y);
                 if (dist < maxDist) {
-                    const alpha = (1 - (dist / maxDist)) * 0.12;
+                    const alpha = (1 - (dist / maxDist)) * 0.22;
                     ctx.beginPath();
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
